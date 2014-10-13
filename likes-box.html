@@ -32,6 +32,14 @@
         opened="{{opened}}">
       <p class="text">has</p>
       <h1 class="likes">{{ formatNumber(likes) }}</h1>
+      <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+      <script> type="text/javascript">
+        document.write(VK.Share.button({
+          url: window.location.href,
+          description: "У меня {{likes}} лайков на стене. А у вас?",
+          noparse: true
+        });
+      </script>
       <p class="text">likes</p>
     </paper-dialog>
   </template>
